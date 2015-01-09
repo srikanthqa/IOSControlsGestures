@@ -22,7 +22,9 @@ public class IOSDatePickerTest {
 		capabilities.setCapability("bundleId","com.srikanth.uicatlog");
 		IOSDriver driver=new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+		//Log name
 		driver.findElements(By.className("UIAButton")).get(0).click();
+		//Get log name
 		driver.scrollTo("Date Picker").click();
 		System.out.println(driver.findElements(By.className("UIAPickerWheel")).get(0).getAttribute("value"));
 		System.out.println(driver.findElements(By.className("UIAPickerWheel")).get(0).getAttribute("values"));
